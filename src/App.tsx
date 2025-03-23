@@ -36,7 +36,9 @@ export const App: React.FC = () => {
     const newQleanQuery = newQuery.toLowerCase().trim();
 
     setIsVisibleDropDown(true);
-    applyQuery(newQleanQuery);
+    if (newQleanQuery.length > 0) {
+      applyQuery(newQleanQuery);
+    }
     setSelectedPerson(null);
   };
 
